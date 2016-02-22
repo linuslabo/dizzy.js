@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+         "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     viewBox="0 0 2000 1500"
+     preserveAspectRatio="xMinYMin"
+     xml:space="preserve">
+     
+   <g  id="canvas">
+      <g class="group group_1">
+         <text x="400" y="650" font-size="200px" font-family="cursive" fill="#0A82AD" stroke="black" stroke-width="11">
+            <tspan>Welcome on board! è.é9</tspan>
+         </text>
+      </g>
+   </g>
+</svg>

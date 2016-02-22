@@ -1,0 +1,133 @@
+<!-- Tools -->
+<div id="toolbar">
+   <div id="menu-button" class="toolbutton fullwidth">
+      Menu &#9656;
+   </div>
+
+   <div class="toolbutton mode pressed" id="tool-default" title="Default controls"><img src="./img/tool_default.png" alt="default mode" /></div>
+   <!-- div class="toolbutton mode" id="tool-path" title="Edit presentation path"><img src="./img/tool_path.png" alt="edit path mode" /></div -->
+   
+   <div class="toolbutton mode" id="tool-text" title="Enter text"><img src="./img/tool_text.png" alt="text mode" /></div>
+   
+   <div class="toolbutton mode" id="tool-rect" title="Draw frames"><img src="./img/tool_rect.png" alt="draw frame mode" /></div>
+   <div class="toolbutton mode" id="tool-invrect" title="Draw invisible frames"><img src="./img/tool_invrect.png" alt="draw inv frame mode" /></div>
+   
+   <div class="toolbutton mode" id="tool-line" title="Draw lines"><img src="./img/tool_line.png" alt="draw line mode" /></div>
+   <!--div class="toolbutton inactive" id="tool-arrow" title="not implemented yet" ><img src="./img/tool_arrow.png" alt="draw arrow mode" /></div -->
+   <div class="toolbutton mode" id="tool-circle" title="Draw ellipses"><img src="./img/tool_circle.png" alt="draw ellipse mode" /></div>
+
+   <div class="toolbutton mode" id="tool-captview" title="Capture View"><img src="./img/tool_captureview.png" alt="capture view mode" /></div>
+   <div class="toolbutton mode" id="tool-image" title="Insert an image"><img src="./img/tool_image_add.png" alt="insert image button" /></div>
+   <!-- div class="toolbutton inactive" id="tool-media" title="not implemented yet"><img src="./img/tool_formula.png" alt="insert media button" /></div -->
+
+   <div class="toolbutton present hidden" id="tool-previous" title="Previous group"><img src="./img/tool_previous.png" alt="Transition to previous group" /></div>
+   <div class="toolbutton present hidden" id="tool-next" title="Next group"><img src="./img/tool_next.png" alt="Transition to next group" /></div>
+   <div class="toolbutton present hidden" id="tool-goto-input" title="Skip to group.."><input id="tool-goto-inp" type="text" size="2" maxlength="3"/></div>
+   <div class="toolbutton present hidden" id="tool-goto-go" title="Skip to group.."><img src="./img/tool_skip.png" alt="Transition to the specified group" /></div>
+
+   <div id="tool-color" class="toolbutton fullwidth" title="Choose fill and stroke colors">
+      <!--img src="./img/zebra_tool_color.png" alt="color icon" class="hidden" /-->
+      <input class="color" id="tool-input-color-fill" title="Fill color" />
+      <input class="color" id="tool-input-color-stroke" title="Stroke color" />
+      <!-- since type="color" is supported only by Opera atm I choose to use jscolor for all browsers -->
+   </div>
+
+   <div id="present-toggle-button" class="toolbutton mode fullwidth" title="Start presentation" >
+      <img src="./img/menu_present.png" alt="start presentation image" /> <span>Present</span>
+   </div>
+</div>
+
+<!-- Expandable menu -->
+<div id="menu" class="hidden">
+   <div id="menu-left">
+   
+      <ul>
+         <li><h2>File</h2>
+            <ul>
+               <li title="Open saved dizzy presentation" 
+                     id="menu-open" class="menu-option"
+                     data-description="Open a saved dizzy presentation. If you choose a new file the current content of the canvas will be erased!">
+                  <img src="./img/menu_open.png" alt="Open file" /> Open 
+                  <div id="menu-open-extended">
+                     <hr />
+                     <form>
+                        <fieldset>
+                           <label for="menu-open-input">File:</label>
+                           <input type="file" id="menu-open-input"/>
+                        </fieldset>
+                     </form>  
+                  </div>
+               </li>
+               <li title="Save dizzy presentation" id="menu-save" class="menu-option" data-description="Save Dizzy presentation. The SVG file will be opened in a new window. You can then save it like a normal webpage ('File -> Save Page As' in most browsers). May require much time in Firefox, download is preferred."><img src="./img/menu_save.png" alt="Save file" /> Show SVG</li>
+               <li title="Download dizzy presentation" 
+                     id="menu-download" class="menu-option"
+                     data-description="Download Dizzy presentation. It will be a zipped .svg file openable in browsers. You may advance the slideshow using arrows or click.">
+                  <img src="./img/menu_save.png" alt="Download file" /> Download this SVG
+               </li>
+               <!-- li title="Import Prezi .pez file (not implemented yet)" class="hidden menu-option"><img src="./img/menu_import.png" alt="Import file" /> Import Prezi
+                  <div id="menu-import-extended" class="hidden">
+                     <hr />
+                     <form>
+                        <fieldset>
+                           <label for="menu-import-input">File:</label>
+                           <input type="file" id="menu-import-input" />
+                        </fieldset>
+                     </form>
+                  </div>
+               </li -->
+            </ul>
+         </li>
+         <!-- li><h2>Style</h2>
+            <ul>
+               <li title="Edit default styles (not implemented yet)" class="hidden menu-option"><img src="./img/menu_style.png" alt="default style" /> Default style
+                  <div id="menu-style-extended" class="hidden"><hr />Bla Bla Bla Bla Bla Bla<br />Bla Bla Bla Bla Bla Bla</div>
+               </li>
+               <li title="Edit raw CSS" data-description="Edit raw CSS. Check out http://www.w3.org/TR/SVG/styling.html for information on how to style SVG with CSS."
+                     class="menu-option"><img src="./img/menu_css.png" alt="edit css file" /> Edit CSS
+                  <div id="menu-css-extended" class="hidden"><hr />
+                     <textarea id="menu-style-css-input" rows="15" cols="10"></textarea>
+                  </div>
+               </li>
+            </ul>
+         </li -->
+         <li><h2>Options</h2>
+			<ul>
+				<li title="Change canvas color" id="menu-background" class="menu-option" data-description="The background color of presentation. It may change not instantly on some browsers.">
+					<img src="./img/zebra_tool_color.png" alt="background icon" /> Presentation Background Color
+					<input class="color" id="tool-input-color-background" title="Background color" />
+				</li>
+			</ul>
+         </li>
+         <li><h2>Help</h2>
+            <ul>
+               <li title="Report bugs found."  id="menu-bugs" class="menu-option" data-description="Where to report bugs and quirks."><img src="./img/menu_bugs.png" alt="report bugs" /> Report bugs
+                  <div id="menu-bugs-extended" class="hidden"><hr />
+                  Please report occured bugs through the <a href="https://github.com/linuslabo/dizzy.js/issues">issue tracker</a>. 
+                  If you include information about your browser and what you were doing when the bug occured it usually can be fixed faster.
+                  </div>
+               </li>
+               <li title="Information about the software, licenses, attributions, etc.." id="menu-about" class="menu-option" data-description="Information about the software, licenses, attributions, etc.." ><img src="./img/menu_about.png" alt="about icon" /> About...
+                  <div id="menu-about-extended" class="hidden"><hr />
+                     Dizzy is a web based presentation application, heavily inspired by <a href="http://prezi.com">Prezi</a>,
+                     that uses a single canvas instead of multiple slides for a presentation.<br />
+                     <br />
+                     Unlike Prezi, presentations with Dizzy are made entirely without Flash, using SVG and Javascript only. 
+                     Also everything is open source under the MIT license (code available on <a href="https://github.com/linuslabo/dizzy.js/tree/dev">Github</a>).<br />
+                     <br />
+
+                     <b>This project is still in development, so there may be bugs and quirks and a lot of features yet to be implemented.</b>
+                     <br />
+
+                     Icons by <a href="http://p.yusukekamiyamane.com/">Yusuke Kamiyamane</a><br />
+                     <br />
+                     Author: <a href="https://github.com/linuslabo">Linuslabo</a> who forked
+                     <a href="https://github.com/Moerphy">Murphy</a>
+                  </div>
+               </li>
+            </ul>
+         </li>
+      </ul>
+   
+   </div>
+   <div id="menu-right">Put your mouse over a menu-item to get a description here.</div>          
+</div>

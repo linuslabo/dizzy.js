@@ -1,0 +1,1 @@
+require(["application","modules"],function(c,b){for(var a=0;a<b.length;a++)b[a]&&c.registerModule(b[a])});

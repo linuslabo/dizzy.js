@@ -1,0 +1,1 @@
+define(["sandbox"],function(a){var b={depends:["zoom","pan"],start:function(){},stop:function(){}};return{init:function(){a.publish("dizzy.modes.register",{name:"name-to-identify-tool-registered",instance:b})},destroy:function(){}}});
