@@ -1,9 +1,9 @@
 h1. dizzy.js
 
 Dizzy enables you to create non-linear presentations on a single canvas, using SVG and Javascript.
-There is a version of the "online editor":http://dizzy.cascone.net for presentation files available, although you could also host your own with the newer code provided here (no serverside code needed). (:
+There is a version of the "online editor":http://linuslabo.github.io/dizzy.js/editor/ for presentation files available, although you could also host your own with the newer code provided here (no serverside code needed). (:
 
-If you wanan try it, I just suggest to use the same browser for editing and viewing :)
+If you wanna try it, I just suggest to use the same browser for editing and viewing :)
 
 h2. Browser support
 
@@ -11,6 +11,7 @@ All modern browsers are supported (no ideas about Internet Explorer), but:
 - Chrome has some problems in saving (opening is fine) presentations with images
 - Opera selects the text on the canvas simply moving the mouse (it's annoying but everything else works anyway)
 
+NOTE: temporarily disabled the download of presentations produced online: browsers' support has changed and Dizzy needs to be updated as well (ASAP).
 
 h2. Contribute
 
