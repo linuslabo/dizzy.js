@@ -1,10 +1,3 @@
-/*
- GNU Lesser General Public License, http://www.gnu.org/copyleft/lesser.html
- @author  Jan Odvarko, http://odvarko.cz
- @created 2008-06-15
- @updated 2011-11-07
- @link    http://jscolor.com
-*/
 var jscolor={dir:"",bindClass:"color",binding:!0,preloading:!0,install:function(){jscolor.addEvent(window,"load",jscolor.init)},init:function(){jscolor.binding&&jscolor.bind();jscolor.preloading&&jscolor.preload()},getDir:function(){if(!jscolor.dir){var b=jscolor.detectDir();jscolor.dir=b!==!1?b:"jscolor/"}return jscolor.dir},detectDir:function(){for(var b=location.href,e=document.getElementsByTagName("base"),a=0;a<e.length;a+=1)if(e[a].href)b=e[a].href;e=document.getElementsByTagName("script");for(a=
 0;a<e.length;a+=1)if(e[a].src&&/(^|\/)jscolor\.js([?#].*)?$/i.test(e[a].src))return b=(new jscolor.URI(e[a].src)).toAbsolute(b),b.path=b.path.replace(/[^\/]+$/,""),b.query=null,b.fragment=null,b.toString();return!1},bind:function(){for(var b=RegExp("(^|\\s)("+jscolor.bindClass+")\\s*(\\{[^}]*\\})?","i"),e=document.getElementsByTagName("input"),a=0;a<e.length;a+=1){var m;if(!e[a].color&&e[a].className&&(m=e[a].className.match(b))){if(m[3])try{eval("prop="+m[3])}catch(v){}e[a].color=new jscolor.color(e[a],
 {})}}},preload:function(){for(var b in jscolor.imgRequire)jscolor.imgRequire.hasOwnProperty(b)&&jscolor.loadImage(b)},images:{pad:[181,101],sld:[16,101],cross:[15,15],arrow:[7,11]},imgRequire:{},imgLoaded:{},requireImage:function(b){jscolor.imgRequire[b]=!0},loadImage:function(b){if(!jscolor.imgLoaded[b])jscolor.imgLoaded[b]=new Image,jscolor.imgLoaded[b].src=jscolor.getDir()+b},fetchElement:function(b){return typeof b==="string"?document.getElementById(b):b},addEvent:function(b,e,a){b.addEventListener?
