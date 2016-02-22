@@ -1,0 +1,12 @@
+/* the humans responsible & colophon */
+/* humanstxt.org */
+
+
+/* TEAM */
+  Dizzy: Linuslabo (forked by Moerphy)
+  Site: dizzypresentation.tk
+  Location: Italy
+
+/* SITE */
+  Standards: SVG, HTML5, CSS3, ECMAScript
+  Components: jQuery
